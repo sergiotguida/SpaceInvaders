@@ -26,13 +26,13 @@ public class Paint extends JPanel{
   boolean termina=false;
   boolean inicio=false;
   int posX=0, posY=0, posY2=-700;
-  Tiro[] tiro = new Tiro[2];
+  Tiro[] tiro = new Tiro[3];
   Player player1;
   Player player2;
   Inimigo[] ini1 = new Inimigo[6];
   Inimigo[] ini2 = new Inimigo[6];
   Inimigo[] ini3 = new Inimigo[6];
-  ArrayList <Base1> base = new ArrayList<>();
+  ArrayList <Base> base = new ArrayList<>();
   Cliente cliente = new Cliente();
   Timer time = new Timer(40, new ActionListener(){
     @Override
@@ -69,7 +69,7 @@ public class Paint extends JPanel{
       System.out.println("Erro ao carregar imagem!");
       System.exit(1);
     }
-    base.add(new Base1(0, 0, this, fundo1));
+    base.add(new Base(0, 0, this, fundo1));
     for(i=0; i<6; i++){
       ini1[i] = new Inimigo(80*i, 0, inimigo1, this);
       ini2[i] = new Inimigo(3+80*i, 50, inimigo2, this);
@@ -153,6 +153,9 @@ public class Paint extends JPanel{
     if(tiro[1]!=null){
       g.drawImage(tiro1, tiro[1].x, tiro[1].y, 5, 20, this);
     }
+    if(tiro[2]!=null){
+      g.drawImage(tiro1, tiro[2].x, tiro[2].y, 5, 20, this);
+    }
   }
   public void Final(Graphics2D g2d){
     g2d.setColor(new Color(0, 0, 0));
@@ -160,6 +163,6 @@ public class Paint extends JPanel{
     g2d.setColor(new Color(250,250,250));
     g2d.setColor (new Color(0,255,0));
 	  g2d.setFont(new Font(Font.SANS_SERIF, Font.HANGING_BASELINE, 30));
-    g2d.drawString("Fim de Jogo !", 150, 350);
+    g2d.drawString("Fim de Jogo!", 150, 350);
   }
 }

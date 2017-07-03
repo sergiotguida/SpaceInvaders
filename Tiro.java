@@ -58,6 +58,10 @@ public class Tiro implements ActionListener{
         timer.stop();
         paint.tiro[1]=null;
       }
+      else if(paint.tiro[2]!=null && paint.tiro[2].equals(this)){
+        timer.stop();
+        paint.tiro[2]=null;
+      }
       if(eliminado){
         if(vetor==1){
           Cliente.ini1[indice]=false;

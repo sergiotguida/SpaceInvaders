@@ -4,12 +4,12 @@ import java.io.*;
 import java.net.*;
 import javax.imageio.*;
 
-class Base1{
+class Base{
   int x, y;
   Image img;
   Shape hitbox=null;
   Paint paint;
-  Base1(int posX, int posY, Paint pinta, Image imagem){
+  Base(int posX, int posY, Paint pinta, Image imagem){
     x=posX;
     y=posY;
     img=imagem;

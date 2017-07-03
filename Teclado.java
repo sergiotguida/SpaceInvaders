@@ -36,7 +36,9 @@ class Teclado extends KeyAdapter{
       }
       else if(paint.tiro[1]==null){
         paint.tiro[1] = new Tiro(paint.player1.x+paint.nave.getWidth(null)/2-7, paint.player1.y-paint.tiro1.getHeight(null), paint.tiro1, paint);
-
+      }
+      else if(paint.tiro[2]==null){
+        paint.tiro[2] = new Tiro(paint.player1.x+paint.nave.getWidth(null)/2-7, paint.player1.y-paint.tiro1.getHeight(null), paint.tiro1, paint);
       }
     }
     else if(x==KeyEvent.VK_ENTER){
